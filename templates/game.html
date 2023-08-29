@@ -1,0 +1,116 @@
+{% extends "base.html" %}
+{% load static %}
+<!doctype html>
+<!-- templates/game.html -->
+  <head>
+	<meta charset="utf-8">
+  </head>  	
+
+	{% block content %}
+	  <header>
+	  	<h1 class="main">game</h1>
+	  </header>
+	  <article>
+	  	<header>
+	  		<h2>ARTILLERY WAR, 21st Century, Eastern Font, Europe</h2>
+	  	</header>
+	  	<nav class="basic">
+	  		<a href="https://github.com/" target="_blank" rel="noopener noreferrer">View code on Github</a>
+	  	</nav>
+	  	<section>
+	  		<header>
+	  			<h3>Introduction</h3>
+	  		</header>
+				<p>Shortly after diving into the world of Python through "PYTHON CRASH COURSE, 2ND EDITION" by Eric Matthes, I felt inspired to embark on the journey of game development. What began as an adventure with the `pygame` module soon evolved into a more comprehensive learning experience, leading me to explore the capabilities of the GUI library `tkinter`.</p>
+	  		  <img src="{% static '/images/01_welcome.jpg' %}" alt="Welcome screen of the game">
+			    <figcaption>Welcome to ARTILLERY WAR</figcaption>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>Development Odyssey</h3>
+	  		</header>
+  			<p>In my first weeks of game coding, I aimed for a solid structure. However, as the game evolved into a complex and sophisticated endeavor, I found myself grappling with intricate code — not exactly spaghetti, but certainly more tangled than I would have preferred. As I delved into other app development projects, the value of a clear, cohesive structure became evident. This insight drove me to revisit and largely reengineer the game.</p>
+  			<p>Switching the game's main engine to `tkinter` and `customtkinter` allowed me to achieve more homogeneous code, even if it meant sacrificing some canvas smoothness. This choice was driven by my keen interest in mastering the `tkinter` GUI.</p>
+        <p>Throughout this process, I deepened my understanding of numerous core libraries, including but not limited to: `tkinter`, `customtkinter`, `PIL`, `os`, `pygame`, `math`, and `random`. Before this, Object-Oriented Programming (OOP) seemed abstract and elusive. Developing ARTILLERY WAR paved my way to a more profound grasp of OOP concepts, from referencing instances and understanding scopes to explore inheritance and function nesting.</p>
+        <p>Midway, Chat GPT 4.0 came onboard, acting as an invaluable coding companion and a robust learning tool.</p>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>Game Overview</h3>
+	  		</header>
+  			<p>ARTILLERY WAR doesn't focus on swift movements; it's an analytical challenge. It's a turn-based strategy where players input results derived from straightforward arithmetic operations—be it azimuth, elevation, wind speed, distance, or direction. With a plethora of calculations to make, it promises to be an intense mental workout.</p>
+	  		<header>
+	  			<h4>Features & Architecture:</h4>
+	  		</header>
+  			<ul class="no-indent">
+  				<li><span class="itallic_bold_text"> Game Engine:</span> Rooted in `tkinter` and `customtkinter`.</li>
+  				<li><span class="itallic_bold_text">Interactive Windows:</span> Four full-screen program windows, each serving unique gameplay interaction, easily navigable via keyboard commands and mouse.</li>
+  				<li><span class="itallic_bold_text">Turn-Based Strategy:</span> Tests players on arithmetical calculations to plan their next move.</li>
+  				<li><span class="itallic_bold_text">Modular & OOP Structure:</span> Including key modules like `game_loop.py` (game's main loop), `map.py` (battlefield visuals), `radar.py` (tracking & targeting), and many more.</li>
+  				<li><span class="itallic_bold_text">Documents:</span> `about.txt` & `rules.txt` provide detailed game insights.</li>
+  			</ul>
+			<div class="carousel_container">  
+			    <div class="carousel_slide carousel1 active">
+			        <a href="{% static '/images/02_menu.jpg' %}" target="_blank">
+			            <img src="{% static '/images/02_menu_s.jpg' %}" alt="Main menu screenshot">
+			        </a>
+			        <figcaption>Main Menu Interface</figcaption>
+			    </div>
+			    <div class="carousel_slide carousel1">
+			        <a href="{% static '/images/03_radar.jpg' %}" target="_blank">
+			            <img src="{% static '/images/03_radar_s.jpg' %}" alt="Radar view screenshot">
+			        </a>
+			        <figcaption>Radar View in Action</figcaption>
+			    </div>
+			    <div class="carousel_slide carousel1">
+			        <a href="{% static '/images/04_drone.jpg' %}" target="_blank">
+			            <img src="{% static '/images/04_drone_s.jpg' %}" alt="Drone view screenshot">
+			        </a>
+			        <figcaption>Bird's Eye View with the Drone</figcaption>
+			    </div>
+			    <div class="carousel_slide carousel1">
+			        <a href="{% static '/images/05_console.jpg' %}" target="_blank">
+			            <img src="{% static '/images/05_console_s.jpg' %}" alt="Console view screenshot">
+			        </a>
+			        <figcaption>Commanders console</figcaption>
+			    </div>
+			    <div class="carousel_slide carousel1">
+			        <a href="{% static '/images/06_results.jpg' %}" target="_blank">
+			            <img src="{% static '/images/06_results_s.jpg' %}" alt="Statistics view screenshot">
+			        </a>
+			        <figcaption>War statistics</figcaption>
+			    </div>
+			    <nav class="navigation_menu">
+			        <button class="carousel_button" id="prevBtn">prev</button>
+			        <button class="carousel_button" id="nextBtn">next</button>
+			    </nav>
+			</div>
+  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>Download the Game</h3>
+	  		</header>
+				<p class="download_paragraph">
+			   The game's source code is available for download in a ZIP file (100Mb). We recommend reviewing the game requirements provided in the "about.txt" file. As with real-life soldiers preparing for war, it's essential to familiarize yourself with and practice the game to effectively engage in combat. Approach the game with patience, caution, and strategic thinking.
+			  <button id="downloadButton" class="carousel_button">download</button>
+				</p>
+     	</section>
+	  	<section>
+	  		<header>
+	  			<h3>Future & Forward</h3>
+	  		</header>
+  			<p>While I'm proud of what I've achieved, I'm aware of the journey ahead. I've recognized areas of improvement, and a third iteration should be on the horizon to further optimize the game. As I move forward, my focus will shift towards advanced OOP, rigorous testing, and refining code architecture.</p>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h4>Discover More:</h4>
+	  		</header>
+  			<p>Dive into the immersive world of ARTILLERY WAR by watching this game video:</p>
+  			<video controls>
+  				<source src="{% static '/videos/artillery.mp4' %}" type="video/mp4">
+  				<p>Your browser does not support HTML5 video.</p>
+  			</video>
+	  	</section>
+	  </article>
+	<script src="{% static 'javascript/buttons.js' %}"></script>
+	{% endblock content %}

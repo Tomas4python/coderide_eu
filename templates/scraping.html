@@ -1,0 +1,55 @@
+{% extends "base.html" %}
+{% load static %}
+<!doctype html><!-- templates/scraping.html -->
+  <head>
+	<meta charset="utf-8">
+  </head>  	
+
+	{% block content %}
+	  <header>
+	  	<h1 class="main">scraping</h1>
+	  </header>
+	  <article>
+	  	<header>
+	  		<h2>Web Scraping App: Simplifying Computer Shopping</h2>
+	  	</header>
+	  	<nav class="basic">
+	  		<a href="https://github.com/Tomas4python/scraping_app.git" target="_blank" rel="noopener noreferrer">View code on Github</a>
+	  	</nav>
+	  	<section>
+  			<p>In today's fast-paced world, finding the right computer at the best price can often become an overwhelming task. Sifting through multiple online stores, comparing prices, reading descriptions - the entire process can be daunting. This is precisely where the "Web Scraping App" comes into play, streamlining the experience and giving users a seamless way to find their perfect computer deal.</p>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>App Features</h3>
+	  		</header>
+  			<ol class="no-indent">
+  				<li><span class="bold_text">Two-Window Interface:</span></li>
+	  			<ul class="no-indent">
+	  				<li><span class="itallic_bold_text">Search Window:</span> Users are presented with pre-defined search strings via buttons, an input field for custom search terms, and logos of nine prominent computer stores in Lithuania, providing a straightforward search experience.</li>
+	  				<li><span class="itallic_bold_text">Results Window:</span> A dynamic window displaying search outcomes – computer descriptions, corresponding website links, and their prices. Results are systematically sorted from the lowest to the highest price. Multiple result windows can be initiated, giving users an invaluable tool for comparison.</li>
+		                <img src="{% static 'images/11_scraping.jpg' %}" alt="Scraping app view screenshot">
+		                <figcaption>Screenshot showcasing the main window alongside three result windows.</figcaption>
+	  			</ul>
+  				<li><span class="bold_text">Simplified Shopping Experience:</span> The primary goal is to alleviate the tediousness of browsing multiple websites. Now, finding and comparing computer prices is just a click away.</li>
+  				<li><span class="bold_text">Learning Undertaking:</span> The focal point of this project was to master the intricacies of tkinter, BeautifulSoup, and Selenium. Additionally, understanding the web structures of various online stores was crucial.</li>
+  			</ol>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>Code Organization</h3>
+	  		</header>
+  			<p>For this iteration, I opted for a single module approach. However, to ensure clarity and maintainability, functions were grouped under relevant classes.</p>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h4>In Action</h4>
+	  		</header>
+  			<p>Watch this video to witness the Web Scraping App in its full glory, simplifying computer shopping like never before.</p>
+  			<video controls>
+  				<source src="{% static 'videos/scraping.mp4' %}" type="video/mp4">
+  				<p>Your browser does not support HTML5 video.</p>
+  			</video>
+	  	</section>
+	  </article>
+	{% endblock content %}

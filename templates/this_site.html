@@ -1,0 +1,42 @@
+{% extends "base.html" %}
+{% load static %}
+<!doctype html>
+<!-- templates/this_site.html -->
+  
+  <head>
+	<meta charset="utf-8">
+  </head>  	
+
+	{% block content %}
+	  <header>
+	  	<h1 class="main">this_site</h1>
+	  </header>
+	  <article>
+	  	<header>
+	  		<h2>Discovering the Essence of this Website</h2>
+	  	</header>
+	  	<nav class="basic">
+	  		<a href="https://github.com/Tomas4python/coderide_eu.git/" target="_blank" rel="noopener noreferrer">View code on Github</a>
+	  	</nav>
+	  	<section>
+  			<p>This platform was conceptualized and brought to life with three distinct intentions:</p>
+  			<ol class="no-indent">
+  				<li> <span class="bold_text">Getting to know Django 4</span>: One of my primary goals was to acquaint myself with the Django 4 module. Furthermore, deploying this website on a server not inherently tailored for Django or Python presented its own set of unique challenges.</li>
+  				<li> <span class="bold_text">A Dive into Web Development</span>: This endeavor provided an excellent opportunity to get skills and understanding of the foundational web languages: HTML, CSS, and JavaScript.</li>
+  				<li> <span class="bold_text">To introduce My Coding Journey</span>: Through this site, I aim to share my programming learning trajectory and the milestones I've reached, in a format that's both engaging and easily digestible.</li>
+  			</ol>
+  			<p>The driving forces behind my journey into the realm of Django, HTML, CSS, and JavaScript have been two amazing publications shown in the photo below:</p>
+  			<ul class="no-indent">
+  				<li><span class="itallic_bold_text">Django for Beginners: Build websites with Python & Django</span> by William S. Vincent</li>
+  				<li><span class="itallic_bold_text">Sams Teach Yourself HTML, CSS, and JavaScript All in One, Third Edition</span> by Jennifer Kyrnin and Julie C. Meloni</li>
+  			</ul>
+                <img src="{% static 'images/07_django.jpg' %}" alt="Image of two books used for learning">
+                <figcaption>The books used for developing the site</figcaption>
+  			<p>In my journey to understand web development, I delved into Django 4 and grasped its structure. I honed my skills in HTML for content layout and experimented with CSS for design enhancements. Additionally, I gained a deeper understanding of JavaScript functionalities.
+  			</p>
+  			<p> One of the pivotal experiences was deploying a Django site on a dedicated server. I familiarized myself with Gunicorn and Nginx, and even ventured into setting up Ubuntu.
+  			</p>
+  			<p>While I've acquired extensive knowledge, I wanted this site to be streamlined and lightweight. My previous experiences with tools like Selenium and BeautifulSoup, as well as publishing on platforms like Joomla and WordPress, made me realize the importance of having a solid foundation in HTML, CSS, and JavaScript.</p>
+	  	</section>
+	  </article>
+	{% endblock content %}

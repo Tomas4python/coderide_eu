@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+{% load static %}
+<!doctype html>
+<!-- templates/meteo.html -->
+  <head>
+	<meta charset="utf-8">
+  </head>  	
+
+	{% block content %}
+	  <header>
+	  	<h1 class="main">meteo</h1>
+	  </header>
+	  <article>
+	  	<header>
+	  		<h2>A Dive into GUI, Data, and Analytics</h2>
+	  	</header>
+	  	<nav class="basic">
+	  		<a href="https://github.com/Tomas4python/meteolt_app.git" target="_blank" rel="noopener noreferrer">View code on Github</a>
+	  	</nav>
+	  	<section>
+  			<p>As I delved deeper into the intricacies of Python coding, I felt the compelling need to acquire proficiency in GUI. From the myriad of options available, I gravitated towards tkinter primarily because it's a staple in the standard library and continues to enjoy considerable popularity.</p>
+  			<p>Parallelly, I was engrossed in the acclaimed books 'Automate the Boring Stuff with Python' by Al Sweigart and 'PRACTICAL SQL: A Beginner’s Guide to Storytelling with Data' by Anthony DeBarros. Coupled with various online courses, I felt an urging desire for hands-on practice.</p>
+  			<p>In my learning trajectory, I encountered a phase emphasizing databases, mathematics, and analytics. While the courses generously offered a plethora of materials, I yearned for something real and useful. I set myself the goal of measuring the accuracy of weather forecasts. Some specific task provides motivation to work and learn. This led me to the vast realm of open meteorological data.</p>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>About the Application</h3>
+	  		</header>
+  			<p>Derived from my learning experiences, this application is designed to harness the Meteo.lt API. This API facilitates the consumption of public data from meteorological stations overseen by the Lithuanian Hydrometeorological Service, a wing under the Ministry of the Environment.</p>
+				<div class="carousel_container">  
+				    <div class="carousel_slide carousel2 active">
+				        <a href="{% static 'images/08_forecast.jpg' %}" target="_blank">
+				            <img src="{% static 'images/08_forecast_s.jpg' %}" alt="Measured and forecast view screenshot">
+				        </a>
+				        <figcaption>Data capturing both historical and forecast metrics.</figcaption>
+				    </div>
+				    <div class="carousel_slide carousel2">
+				        <a href="{% static 'images/09_analysis.jpg' %}" target="_blank">
+				            <img src="{% static 'images/09_analysis_s.jpg' %}" alt="Statistical table view screenshot">
+				        </a>
+				        <figcaption>A statistical table delineating the forecast deviations.</figcaption>
+				    </div>
+				    <div class="carousel_slide carousel2">
+				        <a href="{% static 'images/10_graph.jpg' %}" target="_blank">
+				            <img src="{% static 'images/10_graph_s.jpg' %}" alt="Console view screenshot">
+				        </a>
+				        <figcaption>A graphical analysis tool offering a visual representation of the data.</figcaption>
+				    </div>
+				    <nav class="navigation_menu">
+				        <button class="carousel_button" id="prevBtn2">prev</button>
+				        <button class="carousel_button" id="nextBtn2">next</button>
+				    </nav>
+				</div>
+  			<p>One noteworthy aspect of this application's code structure is its organic evolution (without pre-design). It mirrors my step-by-step learning progression, supplemented by consistent experimentation.</p>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>Key Features and Technical Details</h3>
+	  		</header>
+  			<ul class="no-indent">
+  				<li><span class="itallic_bold_text">Modules & Structure:</span> Initially, modules were developed independently, which were eventually unified into a single, cohesive application with a unified GUI.</li>
+  				<li><span class="itallic_bold_text">Learning Objectives:</span> My endeavors with this application aimed at mastering API requests, handling diverse file types (.json, .csv, .zip, .txt), and gaining prowess in various libraries.</li>
+  				<li><span class="itallic_bold_text">Functionality:</span> The application can fetch both historical and current meteorological data, obtain forecast data from all accessible stations in Lithuania, and offer a comprehensive graphical analysis tool for all acquired data.</li>
+  			</ul>
+  			<p>In the application's second window, you'll find a table comparing absolute numbers of measured and forecasted data. Meanwhile, the third window offers a visual comparison of this data through a graph. While the table provides a broad overview, the graph highlights the temperature deviations, both positive and negative.</p>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h4>Take a look at the video</h4>
+	  		</header>
+  			<p>In the video below you can better see the functionality of the application and the charm of 'tkinter' in its simplicity</p>
+  			<video controls>
+  				<source src="{% static '/videos/meteo.mp4' %}" type="video/mp4">
+  				<p>Your browser does not support HTML5 video.</p>
+  			</video>
+	  	</section>
+	  </article>
+	<script src="{% static 'javascript/buttons.js' %}"></script>
+	{% endblock content %}
