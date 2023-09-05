@@ -1,7 +1,7 @@
 var downloadButton = document.getElementById('downloadButton');
 if (downloadButton) {
     downloadButton.addEventListener('click', function() {
-        const confirmed = window.confirm('Are you sure you want to download a 100Mb file?');
+        const confirmed = window.confirm('Are you sure you want to download a 114 MB file?');
         if (confirmed) {
             window.location.href = "/static/downloads/artillery_war_game.zip";
         }
