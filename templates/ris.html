@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+<!doctype html>
+<!-- templates/ris.html -->
+  <head>
+	<meta charset="utf-8">
+  </head>  	
+
+	{% block content %}
+	  <header>
+	  	<h1 class="main">ris</h1>
+	  </header>
+	  <article>
+	  	<header>
+	  		<h2>Reverse Image Search (RIS)</h2>
+	  	</header>
+	  	<nav class="basic">
+	  		<a href="https://github.com/Tomas4python/reverse_image_search.git" target="_blank" rel="noopener noreferrer">View code on Github</a>
+	  	</nav>
+	  	<section>
+  			<p>I have been working on a Reverse Image Search (RIS) project as part of my learning journey. This project uses EfficientNet models and TensorFlow to analyze and compare images. By leveraging pretrained convolutional neural networks, the system extracts image features and performs similarity searches with K-Nearest Neighbors (KNN) and Cosine Similarity. This setup ensures accurate image matching and has been quite insightful for my understanding of these technologies.</p>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>About the Notebooks</h3>
+	  		</header>
+  			<p>In the notebooks available in my GitHub repository, I cover the complete workflow for developing the Reverse Image Search (RIS) application. This includes downloading the 'Caltech101' image dataset and initializing models with EfficientNetB0 and EfficientNetV2 for comparison. The notebooks guide you through extracting image features using these pretrained CNNs and performing similarity searches with K-Nearest Neighbors (KNN) and Cosine Similarity. Additionally, I use PCA and t-SNE for visualizing the data, providing a comparative analysis of the extracted features. Below I’ve included several visualizations from the notebooks. The first image shows query results, displaying both the query images and the returned matches. The second image is a t-SNE visualization of Caltech 101 features, offering a scatter plot view. The third image showcases 2000 examples from the Caltech101 dataset, also plotted using t-SNE.</p>
+				<div class="carousel_container">  
+				    <div class="carousel_slide carousel2 active">
+				        <a href="{% static 'images/13_ris_photos.jpg' %}" target="_blank">
+				            <img src="{% static 'images/13_ris_photos_s.jpg' %}" alt="Query results">
+				        </a>
+				        <figcaption>Displaying the query images and the returned matches.</figcaption>
+				    </div>
+				    <div class="carousel_slide carousel2">
+				        <a href="{% static 'images/14_ris_tsne_features.jpg' %}" target="_blank">
+				            <img src="{% static 'images/14_ris_tsne_features_s.jpg' %}" alt="T-SNE visualization of Caltech 101 features">
+				        </a>
+				        <figcaption>T-SNE visualization of Caltech 101 features.</figcaption>
+				    </div>
+				    <div class="carousel_slide carousel2">
+				        <a href="{% static 'images/15_ris_tsne_images.jpg' %}" target="_blank">
+				            <img src="{% static 'images/15_ris_tsne_images_s.jpg' %}" alt="2000 examples from the Caltech101 dataset using t-SNE">
+				        </a>
+				        <figcaption>2000 examples from the Caltech101 dataset plotted using t-SNE.</figcaption>
+				    </div>
+				    <nav class="navigation_menu">
+				        <button class="carousel_button" id="prevBtn2">prev</button>
+				        <button class="carousel_button" id="nextBtn2">next</button>
+				    </nav>
+				</div>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>Flask web application</h3>
+	  		</header>
+  			<p>To make the project more interactive, I integrated it into a minimal Flask web application. Users can upload images and see the search results directly in their browser. Here’s a video demonstrating how the Reverse Image Search application works on a local server using Flask:</p>
+	  	  <video controls>
+  				<source src="{% static '/videos/ris.mp4' %}" type="video/mp4">
+  				<p>Your browser does not support HTML5 video.</p>
+  			</video>
+	  	</section>
+	  </article>
+	<script src="{% static 'javascript/buttons.js' %}"></script>
+	{% endblock content %}

@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+{% load static %}
+<!doctype html>
+<!-- templates/ris.html -->
+  <head>
+	<meta charset="utf-8">
+  </head>  	
+
+	{% block content %}
+	  <header>
+	  	<h1 class="main">chatbot</h1>
+	  </header>
+	  <article>
+	  	<header>
+	  		<h2>Conversation Generator (Chatbot)</h2>
+	  	</header>
+	  	<nav class="basic">
+	  		<a href="https://github.com/Tomas4python/chatbot.git" target="_blank" rel="noopener noreferrer">View code on Github</a>
+	  	</nav>
+	  	<section>
+  			<p>The main objective of this project was to create a functional and interactive chatbot capable of generating coherent and contextually appropriate responses. The project involves both the technical aspects of machine learning model training and the practical aspects of GUI application development.</p>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>About the Model</h3>
+	  		</header>
+  			<p>At the heart of the project is a sequence-to-sequence bidirectional encoder-decoder model built using Keras. This model is designed to generate conversations by encoding the input text and decoding it to produce a response. The encoder processes the input sequence and converts it into a context vector, which is then fed into the decoder to generate the output sequence. Two different response generation methods are implemented: argmax, which selects the most likely next word, and beam search, which considers multiple possible sequences to find the most probable one.</p>
+  			<p>Data preprocessing is a critical part of the model development process. This involves cleaning and preparing the dataset, which consists of dialogue pairs, to ensure the model can learn effectively. The model is trained on this preprocessed data to optimize its ability to generate coherent responses. Once trained, the model is integrated into a real-time chatbot application.</p>
+  			<p>The development paper included in the GitHub repository provides an extensive overview of the project, detailing the steps from data preprocessing to model development and the implementation of the chatbot application. This project aims to showcase the integration of advanced machine learning techniques with practical application development.</p>
+  			<p>Below I’ve included several screenshots of Chatbot App.</p>
+				<div class="carousel_container">  
+				    <div class="carousel_slide carousel2 active">
+				        <a href="{% static 'images/16_chatbot_1.jpg' %}" target="_blank">
+				            <img src="{% static 'images/16_chatbot_1_s.jpg' %}" alt="Chatbot screenshot No.1">
+				        </a>
+				        <figcaption>Chatbot screenshot No.1.</figcaption>
+				    </div>
+				    <div class="carousel_slide carousel2">
+				        <a href="{% static 'images/17_chatbot_2.jpg' %}" target="_blank">
+				            <img src="{% static 'images/17_chatbot_2_s.jpg' %}" alt="Chatbot screenshot No.2">
+				        </a>
+				        <figcaption>Chatbot screenshot No.2.</figcaption>
+				    </div>
+				    <div class="carousel_slide carousel2">
+				        <a href="{% static 'images/18_chatbot_3.jpg' %}" target="_blank">
+				            <img src="{% static 'images/18_chatbot_3_s.jpg' %}" alt="Chatbot screenshot No.3">
+				        </a>
+				        <figcaption>Chatbot screenshot No.3.</figcaption>
+				    </div>
+				    <nav class="navigation_menu">
+				        <button class="carousel_button" id="prevBtn2">prev</button>
+				        <button class="carousel_button" id="nextBtn2">next</button>
+				    </nav>
+				</div>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>Chatbot Application</h3>
+	  		</header>
+  			<p>The application itself, while a smaller part of the project, is crucial for demonstrating the model's capabilities. It features a customtkinter-based GUI with a conversation display field, an input field, and two fields for sample inputs. Users can enter a message and receive a response from the chatbot, or use pre-prepared text samples for quick testing. The intuitive design allows for easy interaction, and the 'Random' button adds convenience by generating random sample inputs. Check out the video demonstrating the chatbot in action:</p>
+	  	  <video controls>
+  				<source src="{% static '/videos/chatbot.mp4' %}" type="video/mp4">
+  				<p>Your browser does not support HTML5 video.</p>
+  			</video>
+	  	</section>
+	  </article>
+	<script src="{% static 'javascript/buttons.js' %}"></script>
+	{% endblock content %}

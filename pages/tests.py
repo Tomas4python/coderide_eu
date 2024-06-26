@@ -86,3 +86,70 @@ class ScrapingpageTests(SimpleTestCase):
 		response = self.client.get(reverse("scraping"))
 		self.assertContains(response, "<h1>Web Scraping App</h1>")
 
+class RispageTests(SimpleTestCase):
+	def test_url_exists_at_correct_location(self):
+		response = self.client.get("/ris/")
+		self.assertEqual(response.status_code, 200)
+
+	def test_url_available_by_name(self):
+		response = self.client.get(reverse("ris"))
+		self.assertEqual(response.status_code, 200)
+
+	def test_template_name_correct(self):
+		response = self.client.get(reverse("ris"))
+		self.assertTemplateUsed(response, "ris.html")
+
+	def test_template_content(self):
+		response = self.client.get(reverse("ris"))
+		self.assertContains(response, "<h1>Reverse Image Search</h1>")
+
+class ChatbotpageTests(SimpleTestCase):
+	def test_url_exists_at_correct_location(self):
+		response = self.client.get("/chatbot/")
+		self.assertEqual(response.status_code, 200)
+
+	def test_url_available_by_name(self):
+		response = self.client.get(reverse("chatbot"))
+		self.assertEqual(response.status_code, 200)
+
+	def test_template_name_correct(self):
+		response = self.client.get(reverse("chatbot"))
+		self.assertTemplateUsed(response, "chatbot.html")
+
+	def test_template_content(self):
+		response = self.client.get(reverse("chatbot"))
+		self.assertContains(response, "<h1>ChatBot</h1>")
+
+class SqlitepageTests(SimpleTestCase):
+	def test_url_exists_at_correct_location(self):
+		response = self.client.get("/sqlite/")
+		self.assertEqual(response.status_code, 200)
+
+	def test_url_available_by_name(self):
+		response = self.client.get(reverse("sqlite"))
+		self.assertEqual(response.status_code, 200)
+
+	def test_template_name_correct(self):
+		response = self.client.get(reverse("sqlitet"))
+		self.assertTemplateUsed(response, "sqlite.html")
+
+	def test_template_content(self):
+		response = self.client.get(reverse("sqlite"))
+		self.assertContains(response, "<h1>SQLite</h1>")
+
+class ImgslcpageTests(SimpleTestCase):
+	def test_url_exists_at_correct_location(self):
+		response = self.client.get("/imgslc/")
+		self.assertEqual(response.status_code, 200)
+
+	def test_url_available_by_name(self):
+		response = self.client.get(reverse("imgslc"))
+		self.assertEqual(response.status_code, 200)
+
+	def test_template_name_correct(self):
+		response = self.client.get(reverse("imgslc"))
+		self.assertTemplateUsed(response, "imgslc.html")
+
+	def test_template_content(self):
+		response = self.client.get(reverse("imgslc"))
+		self.assertContains(response, "<h1>Imgslc</h1>")

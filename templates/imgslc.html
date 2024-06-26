@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+{% load static %}
+<!doctype html>
+<!-- templates/ris.html -->
+  <head>
+	<meta charset="utf-8">
+  </head>  	
+
+	{% block content %}
+	  <header>
+	  	<h1 class="main">img_slc</h1>
+	  </header>
+	  <article>
+	  	<header>
+	  		<h2>Image Processing Application</h2>
+	  	</header>
+	  	<nav class="basic">
+	  		<a href="https://github.com/Tomas4python/image_slicing.git" target="_blank" rel="noopener noreferrer">View code on Github</a>
+	  	</nav>
+	  	<section>
+  			<p>This Image Processing Application is designed as an educational project to explore and learn Python programming, with a particular focus on leveraging the NumPy library. The application processes images stored in a designated 'images' directory, supporting formats such as .jpg, .jpeg, .png, and .bmp.</p>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>About the Application</h3>
+	  		</header>
+  			<p>The core functionality involves applying five distinct processing techniques to each image, showcasing the versatility and power of NumPy arrays in image manipulation. These processed images are then displayed in a simple user-friendly GUI built using Tkinter, offering a straightforward and interactive way to view the results. The application's architecture is deliberately structured to facilitate easy expansion, allowing for the addition of more processing methods without significant restructuring.</p>
+  			<p>The basic features of the application include vertical and horizontal slicing of images into 20-200 slices using NumPy, image rotation, and image concatenation using vstack and hstack. Additional features include color filters that convert RGB images to grayscale, red, green, or blue, and a blur filter that applies a custom kernel to blur images. The application also handles RGBA images by removing the alpha channel to ensure compatibility with formats like JPEG. For testing, NumPy-based sample tests are included to validate image processing functions.</p>
+  			<p>Below I’ve included several screenshots of Application.</p>
+				<div class="carousel_container">  
+				    <div class="carousel_slide carousel2 active">
+				        <a href="{% static 'images/22_imgslc_1.jpg' %}" target="_blank">
+				            <img src="{% static 'images/22_imgslc_1_s.jpg' %}" alt="Image Processing Application screenshot No.1">
+				        </a>
+				        <figcaption>Image Processing Application screenshot No.1.</figcaption>
+				    </div>
+				    <div class="carousel_slide carousel2">
+				        <a href="{% static 'images/23_imgslc_2.jpg' %}" target="_blank">
+				            <img src="{% static 'images/23_imgslc_2_s.jpg' %}" alt="Image Processing Application screenshot No.2">
+				        </a>
+				        <figcaption>Image Processing Application screenshot No.2.</figcaption>
+				    </div>
+				    <div class="carousel_slide carousel2">
+				        <a href="{% static 'images/24_imgslc_3.jpg' %}" target="_blank">
+				            <img src="{% static 'images/24_imgslc_3_s.jpg' %}" alt="Image Processing Application screenshot No.3">
+				        </a>
+				        <figcaption>Image Processing Application screenshot No.3.</figcaption>
+				    </div>
+				    <nav class="navigation_menu">
+				        <button class="carousel_button" id="prevBtn2">prev</button>
+				        <button class="carousel_button" id="nextBtn2">next</button>
+				    </nav>
+				</div>
+	  	</section>
+	  	<section>
+  			<p>This project was also oriented towards developing the application while adhering to a proper development structure. The project includes command line arguments, a comprehensive README.md, and a requirements.txt file for managing dependencies. The application follows a traditional project structure with directories for images, logs, source code, temporary files, and tests. This structured approach includes installation and launch instructions, ensuring the application is easy to set up and use. Check out the video demonstrating the APP in action:</p>
+	  	  <video controls>
+  				<source src="{% static '/videos/imgslc.mp4' %}" type="video/mp4">
+  				<p>Your browser does not support HTML5 video.</p>
+  			</video>
+	  	</section>
+	  </article>
+	<script src="{% static 'javascript/buttons.js' %}"></script>
+	{% endblock content %}

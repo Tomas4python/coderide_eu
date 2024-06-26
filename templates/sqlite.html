@@ -1,0 +1,65 @@
+{% extends "base.html" %}
+{% load static %}
+<!doctype html>
+<!-- templates/ris.html -->
+  <head>
+	<meta charset="utf-8">
+  </head>  	
+
+	{% block content %}
+	  <header>
+	  	<h1 class="main">sqlite</h1>
+	  </header>
+	  <article>
+	  	<header>
+	  		<h2>SQLite Database Manager</h2>
+	  	</header>
+	  	<nav class="basic">
+	  		<a href="https://github.com/Tomas4python/media_sql.git" target="_blank" rel="noopener noreferrer">View code on Github</a>
+	  	</nav>
+	  	<section>
+  			<p>This project focuses on leveraging SQLite for managing data scraped from media websites, emphasizing my skill in using SQLite databases. The application scrapes two media websites using Selenium and stores the scraped data in SQLite databases. A Tkinter-based GUI allows users to interact with and query these databases via SQL requests, showcasing the practical application of database management in Python.</p>
+	  	</section>
+	  	<section>
+	  		<header>
+	  			<h3>About the Application</h3>
+	  		</header>
+  			<p>The Tkinter GUI features a menu for scraping commands, where users can perform both shallow and deep scrapes of media websites Epika and Mediateka. The shallow scrape collects a list of movies from the initial search pages, saving this data to a temporary CSV file. The deep scrape utilizes this CSV to gather detailed information from individual movie pages, storing the data in a SQLite database. The process ensures only new movies are added by checking URLs against existing records.</p>
+  			<p>The GUI also includes SQL query entry fields, providing both sample queries and a space for manual entry. The 'Execute' function is designed to handle 'SELECT' queries, fetching data from the databases and displaying it in the results area. This setup allows users to easily retrieve and view data from the SQLite databases.</p>
+  			<p>The results area displays a table of results based on the executed SQL query, efficiently handling large datasets even for broad queries. Additionally, the application includes extensive logging features. Errors are logged in an error.log file, while informational messages, warnings, and errors are streamed to the console. This robust logging system aids in troubleshooting and maintaining the application.</p>
+  			<p>Below I’ve included several screenshots of Application.</p>
+				<div class="carousel_container">  
+				    <div class="carousel_slide carousel2 active">
+				        <a href="{% static 'images/19_sqlite_1.jpg' %}" target="_blank">
+				            <img src="{% static 'images/19_sqlite_1_s.jpg' %}" alt="SQLite Database Manager App screenshot No.1">
+				        </a>
+				        <figcaption>SQLite Database Manager App screenshot No.1.</figcaption>
+				    </div>
+				    <div class="carousel_slide carousel2">
+				        <a href="{% static 'images/20_sqlite_2.jpg' %}" target="_blank">
+				            <img src="{% static 'images/20_sqlite_2_s.jpg' %}" alt="SQLite Database Manager App screenshot No.2">
+				        </a>
+				        <figcaption>SQLite Database Manager App screenshot No.2.</figcaption>
+				    </div>
+				    <div class="carousel_slide carousel2">
+				        <a href="{% static 'images/21_sqlite_3.jpg' %}" target="_blank">
+				            <img src="{% static 'images/21_sqlite_3_s.jpg' %}" alt="SQLite Database Manager App screenshot No.3">
+				        </a>
+				        <figcaption>SQLite Database Manager App screenshot No.3.</figcaption>
+				    </div>
+				    <nav class="navigation_menu">
+				        <button class="carousel_button" id="prevBtn2">prev</button>
+				        <button class="carousel_button" id="nextBtn2">next</button>
+				    </nav>
+				</div>
+	  	</section>
+	  	<section>
+  			<p>This project not only enhanced my Python coding skills but also provided a comprehensive experience in full app development and delivery, adhering to the recommended Python project structure. Key features include configuration management with config.yaml, centralized error logging, and an Argparser for application demo launch. Check out the video demonstrating the APP in action:</p>
+	  	  <video controls>
+  				<source src="{% static '/videos/sqlite.mp4' %}" type="video/mp4">
+  				<p>Your browser does not support HTML5 video.</p>
+  			</video>
+	  	</section>
+	  </article>
+	<script src="{% static 'javascript/buttons.js' %}"></script>
+	{% endblock content %}

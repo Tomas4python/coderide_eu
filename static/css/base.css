@@ -120,13 +120,25 @@ nav.navigation_menu a:active, .carousel_button:active, #prevBtn:active, #nextBtn
 }
 
 nav.basic a {
-	font-size: 1em;
+	font-size: 0.8em;
 	color: lightgreen;
 	text-decoration: underline;
 	background-color: #393E46;
 }
 
 nav.basic a:hover {
+	color: #EEEEEE;
+	text-decoration: underline;
+}
+
+nav.red a {
+	font-size: 0.9em;
+	color: indianred;
+	text-decoration: underline;
+	background-color: #393E46;
+}
+
+nav.red a:hover {
 	color: #EEEEEE;
 	text-decoration: underline;
 }
@@ -168,6 +180,22 @@ h4 {
 	font-size: 1.0em;
 }
 
+.tags {
+    margin-top: 5px;
+}
+
+.tags .tag {
+    display: inline-block;
+    background-color: #A7A7A7 !important;
+    color: #393E46 !important;
+    padding: 3px 10px !important;
+    border-radius: 5px !important;
+    font-size: 0.7em !important;
+    font-weight: bold;
+    margin-right: 5px !important;
+    margin-bottom: 5px !important;
+}
+
 .bold_text {
 	font-weight: bold;
 	font-style: normal;
@@ -177,6 +205,14 @@ h4 {
 .itallic_bold_text {
 	font-weight: bold;
 	font-style: italic;
+}
+
+.itallic_bold_text_red {
+	font-weight: bold;
+	font-size: 1.1em;
+	color: indianred;
+	font-style: italic;
+	# text-decoration: underline;
 }
 
 ol.no-indent, ul.no-indent {
